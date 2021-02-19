@@ -1,0 +1,45 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "gradle": {
+    "enabled": false
+  },
+  "gradle-lite": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "languages": [
+        "java"
+      ],
+      "packageNames": [
+        "org.jboss.resteasy:resteasy-bom",
+        "org.jboss.resteasy:resteasy-cdi"
+      ],
+      "allowedVersions": "<= 3.1"
+    },
+    {
+      "languages": [
+        "java"
+      ],
+      "packageNames": [
+        "org.eclipse.jgit:org.eclipse.jgit",
+        "org.eclipse.jgit:org.eclipse.jgit.junit"
+      ],
+      "extends": [
+        ":disableMajorUpdates"
+      ]
+    },
+    {
+      "languages": [
+        "java"
+      ],
+      "packageNames": [
+        "org.apache.maven:maven-model",
+        "org.apache.maven:maven-model-builder"
+      ],
+      "enabled": false
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+plugins {
+  id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+  implementation "org.jboss.resteasy:resteasy-bom:${resteasyVersion}"
+  implementation "org.jboss.resteasy:resteasy-cdi:${resteasyVersion}"
+
+  implementation "org.eclipse.jgit:org.eclipse.jgit:${jgitVersion}"
+  testImplementation "org.eclipse.jgit:org.eclipse.jgit.junit:${jgitVersion}"
+
+  implementation "org.apache.maven:maven-model:${mavenModelVersion}"
+  implementation "org.apache.maven:maven-model-builder:${mavenModelVersion}"
+}
